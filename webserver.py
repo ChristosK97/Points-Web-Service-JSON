@@ -117,8 +117,8 @@ class pointsRecords(object):
     def retrieveBalances(self):
         with open('points.json') as json_file:
             data = json.load(json_file)
-        print(data["payerBalances"])
         return json.dumps(data["payerBalances"])
 
 
 cherrypy.quickstart(pointsRecords())
+
